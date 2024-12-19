@@ -2,3 +2,4 @@ my_env/
 *.pyc
 __pycache__/
 IAGenerativa/PrimerosPasos/correos_generados.txt
+.DS_Store
