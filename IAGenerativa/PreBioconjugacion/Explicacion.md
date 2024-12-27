@@ -119,3 +119,31 @@ Correos generados:
 	20: correo15@yahoo.com.com.com.com.com.cast.cast.comcast.com.ro.loud.comro.alvarado.clareyes52@udp.cl.cl.cl.cl.usach.clar.closcil.clifuentes32@gmail.com.com.com.com.com.-@uc.cl.clerrero.clarero23@yahoo.
 
 	El problema del padding persiste, asi que configuré diferentes Tokens de Padding, 
+
+
+
+	Cuarta ejecucion:  to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+Both `max_new_tokens` (=30) and `max_length`(=30) seem to have been set. `max_new_tokens` will take precedence. Please refer to the documentation for more information. (https://huggingface.co/docs/transformers/main/en/main_classes/text_generation)
+Correos generados:
+1: correo.olivares44@usach.cl
+2: correo.reyes46@yahoo.com
+3: correo-silva32@hotmail.com
+4: correo-ortiz33@outlook.com
+5: correo95@udp.cl
+6: correo13@protonmail.com
+7: correo-olivares18@live.com
+8: correo_gonzalez32@udp.cl
+9: correo.carrasco80@udp.cl
+10: correo68@uchile.cl
+11: correo78@outlook.com
+12: correo78@yahoo.com
+13: correo-cifuentes9@live.com
+14: correo.caceres93@gmail.com
+15: correo-alvarado94@live.com
+16: correo_castillo83@live.com
+17: correo_contreras63@hotmail.com
+18: correo-caceres97@uchile.cl
+19: correo81@live.com
+20: correo.cifuentes5@udp.cl 
+Investigando, me enteré el que archivo que se usa para entrenar la IA, tiene que tener al final de cada linea "<|endoftext|>", debido a que GPT2 no sabe donde termina cada linea, asi podemos evitar el overfitting.
